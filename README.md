@@ -6,7 +6,6 @@ Library App is a modular application designed to manage library operations such 
 
 ## Project Structure
 
-- `AccelerateDevGHCopilot.sln` - Solution file for the project.
 - `src/`
   - `Library.ApplicationCore/`
     - `Entities/` - Contains core domain entities.
@@ -54,9 +53,14 @@ Library App is a modular application designed to manage library operations such 
    git clone <repository-url>
    ```
 
-2. Open the solution file `AccelerateDevGHCopilot.sln` in Visual Studio.
+2. Open the folder in Visual Studio Code or Visual Studio.
 
-3. Build the solution to restore dependencies and compile the code.
+3. Restore and build the console project (this also builds referenced projects):
+
+  ```bash
+  dotnet restore src/Library.Console/Library.Console.csproj
+  dotnet build src/Library.Console/Library.Console.csproj -c Debug
+  ```
 
 4. Run the console application:
 
